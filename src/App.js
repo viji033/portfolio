@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/pages/Header';
 import About from './components/pages/About';
 import Resume from './components/pages/Resume';
@@ -33,7 +33,7 @@ function AppContent() {
 
 function App() {
   return (
-    <Router>
+    <Router basename="/portfolio">
       <AppContent />
     </Router>
   );
