@@ -47,13 +47,7 @@ const Hire = () => {
               </div>
 
               {/* Tech Blogging */}
-              <div className="hobby-card">
-                <FontAwesomeIcon icon={faPen} className="hobby-icon" />
-                <div>
-                  <h3>Tech Blogging / Writing Tutorials</h3>
-                  <p>Demonstrates communication skills and expertise.</p>
-                </div>
-              </div>
+              
 
               {/* UI/UX Design */}
               <div className="hobby-card">
@@ -65,22 +59,7 @@ const Hire = () => {
               </div>
 
               {/* Freelance Work */}
-              <div className="hobby-card">
-                <FontAwesomeIcon icon={faCogs} className="hobby-icon" />
-                <div>
-                  <h3>Building Side Projects / Freelance Work</h3>
-                  <p>Proves self-motivation and practical application of skills.</p>
-                </div>
-              </div>
-
-              {/* Hackathons */}
-              <div className="hobby-card">
-                <FontAwesomeIcon icon={faChalkboardTeacher} className="hobby-icon" />
-                <div>
-                  <h3>Participating in Hackathons or Coding Competitions</h3>
-                  <p>Indicates problem-solving, teamwork, and working under pressure.</p>
-                </div>
-              </div>
+              
 
               {/* Frameworks */}
               <div className="hobby-card">

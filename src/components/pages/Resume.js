@@ -9,7 +9,7 @@ const educationData = [
 ];
 
 const experienceData = [
-  { year: '2024-2025', role: 'Web developer', company: '@Language Learners imstitute', description: 'Designed responsive websites and templates.' },
+  { year: '2024-2025', role: 'Web developer', company: '@Learners IT World', description: 'Designed responsive websites and templates.' },
   
   
 ];
