@@ -1,0 +1,346 @@
+@font-face {
+  font-family: 'The Bjorke';
+  src: url('../../../public/fonts/TheBjorkeAlter.woff2') format('woff2'),
+       url('../../../public/fonts/TheBjorkeAlter.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.front-section {
+  padding-top: 100px;
+  padding-bottom: 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Diamond Wrapper */
+.diamond-wrapper {
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  position: relative;
+  transform: rotate(45deg);
+  background: #f0f0f0;
+  overflow: hidden;
+  border-radius: 10px;
+  z-index: 15;
+  animation: floatDiamond 6s ease-in-out infinite;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Diamond Profile Image */
+.diamond-wrapper .profile-img {
+  position: absolute;
+  top: 0%;
+  left: 30px;
+  width: 100%;
+  height: 120%;
+  object-fit: cover;
+  transform: rotate(-45deg);
+}
+
+/* Titles Around the Diamond */
+.titles {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  transform: rotate(45deg);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.title {
+  position: absolute;
+  font-family: 'Hind', sans-serif;
+  color: #ccc;
+  font-size: 24px;
+  letter-spacing: 25px;
+  text-align: center;
+  text-transform: lowercase;
+  line-height: 1;
+}
+
+/* Positioning the Titles */
+.title.top {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100%);
+}
+
+.title.right {
+  top: 50%;
+  right: 0;
+  transform: rotate(-90deg) translateX(50%) translateY(-100%);
+  transform-origin: right top;
+}
+
+.title.bottom {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(100%) rotate(180deg);
+}
+
+.title.left {
+  top: 50%;
+  left: 0;
+  transform: rotate(90deg) translateX(-50%) translateY(-100%);
+  transform-origin: left top;
+}
+
+/* Navigation Links */
+.nav-links {
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: rotate(45deg);
+  z-index: 25;
+  pointer-events: none;
+}
+
+.nav-links ul {
+  position: absolute;
+  left: 90%;
+  top: 45%;
+  transform: translateY(-50%);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0;
+  white-space: nowrap;
+}
+
+.nav-links ul li {
+  display: block;
+}
+
+.nav-links ul li a {
+  font-weight: bold;
+  display: block;
+  font-size: 14px;
+  padding: 25px 0;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-decoration: none;
+  line-height: 1;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  pointer-events: auto;
+}
+
+/* Hover Effect for Navigation */
+.nav-links ul li a:hover {
+  color: black;
+}
+
+.nav-links ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: black;
+  left: 0;
+  bottom: -5px;
+  transition: width 0.3s ease;
+}
+
+.nav-links ul li a:hover::after {
+  width: 100%;
+}
+
+/* Heading (Name at Bottom) */
+.front-heading {
+  text-align: center;
+  margin-top: 130px;
+  position: relative;
+  z-index: 10;
+}
+
+.front-heading h2 {
+  font-size: 75px;
+  font-weight: 300;
+  letter-spacing: 0px;
+  line-height: 1;
+  color: black;
+  font-family: 'The Bjorke', sans-serif;
+  font-style: italic;
+  display: inline-block;
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
+
+/* Transition Container */
+.transition-container {
+  position: fixed;
+  top: 49%;
+  left: 50%;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  pointer-events: none;
+  background: transparent;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%, -50%);
+}
+
+body.transitioning {
+  overflow: hidden;
+  height: 100vh;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+/* Diagonal Wipe Effect */
+.diagonal-wipe {
+  width: 400px;
+  height: 401px;
+  transform: rotate(45deg);
+  border-radius: 10px;
+  overflow: hidden;
+  z-index: 10001;
+  background: transparent;
+  position: absolute;
+}
+
+.diagonal-wipe::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: #DFFF00;
+  animation: diagonalWipe 0.8s ease-in-out forwards;
+}
+
+@keyframes diagonalWipe {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+/* Expanding Diamond Effect */
+.expanding-diamond {
+  width: 400px;
+  height: 400px;
+  background-color: #DFFF00;
+  transform: rotate(45deg) scale(1);
+  opacity: 0;
+  border-radius: 10px;
+  position: absolute;
+  z-index: 10002;
+  animation: expandDiamond 3.5s ease-in-out 0.8s forwards;
+}
+
+@keyframes expandDiamond {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) scale(1);
+  }
+  10% {
+    opacity: 1;
+    transform: rotate(45deg) scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(225deg) scale(15);
+  }
+}
+
+/* Responsive Design (Mobile Friendly) */
+@media (max-width: 768px) {
+  .diamond-wrapper,
+  .titles,
+  .nav-links {
+    width: 200px;
+    height: 200px;
+  }
+
+  .diagonal-wipe,
+  .expanding-diamond {
+    width: 204px;
+    height: 204px;
+    top: 106px;
+  }
+
+  .front-heading h2 {
+    font-size: 36px;
+    letter-spacing: 5px;
+  }
+
+  /* Adjust nav-links for mobile */
+  .nav-links {
+    width: 200px;
+    height: 200px;
+    top: 80px;
+    transform: rotate(45deg);
+  }
+
+  .nav-links ul {
+    left: 140%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+  }
+
+  .nav-links ul li a {
+    font-size: 12px;
+    padding: 10px 0;
+    letter-spacing: 2px;
+  }
+
+  /* Adjust animation keyframes for mobile */
+  @keyframes expandDiamond {
+    0% {
+      opacity: 0;
+      transform: rotate(45deg) scale(1);
+    }
+    10% {
+      opacity: 1;
+      transform: rotate(45deg) scale(1);
+    }
+    100% {
+      opacity: 1;
+      transform: rotate(225deg) scale(8);
+    }
+  }
+}
+
+
+
+
+
+
+
+.diamond-wrapper svg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 65%;
+  left: 65%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  object-fit: contain;
+  pointer-events: none;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+

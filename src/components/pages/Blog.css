@@ -1,0 +1,127 @@
+.certificates-section {
+    padding: 60px 20px;
+    background: #DFFF00;
+    min-height: 100vh;
+  }
+  
+  .back-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    cursor: pointer;
+    z-index: 999;
+  }
+  
+  .back-button .inner {
+    width: inherit;
+    text-align: center;
+    position: relative;
+  }
+  
+  .back-button label {
+    font-size: 0.8em;
+    line-height: 4em;
+    text-transform: uppercase;
+    color: black;
+    transition: all 0.3s ease-in;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .back-button .inner::before,
+  .back-button .inner::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background: #FFC107;
+    left: 0;
+    transition: all 0.3s ease-in;
+  }
+
+  .divider-draft.center {
+    width: 100px;  /* You can adjust the width as needed */
+    height: 2px;   /* Thickness of the line */
+    background-color: black; /* Make the line black */
+    margin: -5px auto;  /* Center the line and provide spacing */
+  }
+  
+  
+  .back-button .inner::before {
+    top: 50%;
+    transform: rotate(45deg);
+  }
+  
+  .back-button .inner::after {
+    bottom: 50%;
+    transform: rotate(-45deg);
+  }
+  
+  .back-button:hover label {
+    opacity: 1;
+  }
+  
+  .back-button:hover .inner::before {
+    transform: rotate(0);
+    top: 0;
+  }
+  
+  .back-button:hover .inner::after {
+    transform: rotate(0);
+    bottom: 0;
+  }
+  
+  .section-header {
+    margin-bottom: 40px;
+  }
+  
+  .certificates-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+  }
+  
+  .certificate-card {
+    background: #fff;
+    padding: 20px 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+  }
+  
+  .certificate-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .certificate-card h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #222;
+  }
+  
+  .certificate-card p {
+    margin: 4px 0;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  @media (max-width: 480px) {
+    .certificates-list {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  
+    .certificate-card {
+      padding: 15px 20px;
+    }
+  
+    .certificate-card h4 {
+      font-size: 16px;
+    }
+  
+    .certificate-card p {
+      font-size: 13px;
+    }
+  }
+  

@@ -1,0 +1,262 @@
+@font-face {
+  font-family: 'The Bjorke';
+  src: url('../../../public/fonts/TheBjorkeAlter.woff2') format('woff2'),
+       url('../../../public/fonts/TheBjorkeAlter.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+
+.back-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    cursor: pointer;
+    z-index: 999;
+  }
+  
+  .back-button .inner {
+    width: inherit;
+    text-align: center;
+    position: relative;
+  }
+  
+  .back-button label {
+    font-size: 0.8em;
+    line-height: 4em;
+    text-transform: uppercase;
+    color: black;
+    transition: all 0.3s ease-in;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .back-button .inner::before,
+  .back-button .inner::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background: #FFC107;
+    left: 0;
+    transition: all 0.3s ease-in;
+  }
+  
+  .back-button .inner::before {
+    top: 50%;
+    transform: rotate(45deg);
+  }
+  
+  .back-button .inner::after {
+    bottom: 50%;
+    transform: rotate(-45deg);
+  }
+  
+  .back-button:hover label {
+    opacity: 1;
+  }
+  
+  .back-button:hover .inner::before,
+  .back-button:hover .inner::after {
+    transform: rotate(0);
+  }
+  
+  .back-button:hover .inner::before {
+    top: 0;
+  }
+  
+  .back-button:hover .inner::after {
+    bottom: 0;
+  }
+/* Title section */
+.title-section {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.title-section h2 {
+  font-size: 60px;
+  margin-bottom: 10px;
+  margin-top: -30px !important;
+  font-family: 'The Bjorke', sans-serif;
+}
+
+.title-section .subtitle {
+  font-size: 18px;
+  color: black;
+}
+
+.divider-draft.center {
+  margin: 16px auto;
+  width: 80px;
+  height: 3px;
+  background-color: #FFC107;
+  border-radius: 3px;
+}
+
+/* Project details layout */
+.project-description {
+  max-width: 700px;
+  margin: 30px auto;
+  background-color: #f9f9f9;
+  padding: 20px 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.project-description h4 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.project-description p {
+  font-size: 16px;
+  color: black;
+}
+
+/* Back button */
+.back-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.back-button .inner {
+  width: inherit;
+  text-align: center;
+  position: relative;
+}
+
+.back-button label {
+  font-size: 0.8em;
+  line-height: 4em;
+  text-transform: uppercase;
+  color: black;
+  transition: all 0.3s ease-in;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.back-button .inner::before,
+.back-button .inner::after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background: #FFC107;
+  left: 0;
+  transition: all 0.3s ease-in;
+}
+
+.back-button .inner::before {
+  top: 50%;
+  transform: rotate(45deg);
+}
+
+.back-button .inner::after {
+  bottom: 50%;
+  transform: rotate(-45deg);
+}
+
+.back-button:hover label {
+  opacity: 1;
+}
+
+.back-button:hover .inner::before,
+.back-button:hover .inner::after {
+  transform: rotate(0);
+}
+
+.back-button:hover .inner::before {
+  top: 0;
+}
+
+.back-button:hover .inner::after {
+  bottom: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .title-section h2 {
+    font-size: 28px;
+  }
+
+  .project-description {
+    padding: 15px 20px;
+  }
+
+  .project-description h4 {
+    font-size: 20px;
+  }
+
+  .project-description p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title-section h2 {
+    font-size: 24px;
+  }
+
+  .title-section .subtitle {
+    font-size: 15px;
+  }
+
+  .project-description {
+    padding: 12px 16px;
+  }
+
+  .project-description h4 {
+    font-size: 18px;
+  }
+
+  .project-description p {
+    font-size: 14px;
+  }
+
+  .back-button {
+    top: 10px;
+    right: 10px;
+    width: 40px;
+  }
+
+  .back-button label {
+    font-size: 0.7em;
+  }
+}
+.title-section {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.project-title {
+  margin-top: 40px;
+  font-size: 20px;
+  font-weight: 600;
+  color: black;
+}
+
+.project-text {
+  font-size: 16px;
+  color: black;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .project-title {
+    font-size: 18px;
+  }
+
+  .project-text {
+    font-size: 15px;
+  }
+}
+  

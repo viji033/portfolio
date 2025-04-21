@@ -1,0 +1,254 @@
+/* ===== FONT FACE ===== */
+@font-face {
+  font-family: 'The Bjorke';
+  src: url('../../../public/fonts/TheBjorkeAlter.woff2') format('woff2'),
+       url('../../../public/fonts/TheBjorkeAlter.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ===== BASE STYLES ===== */
+.resume-section {
+  position: relative;
+  padding: 80px 0;
+  background: #DFFF00;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.col-12 {
+  width: 100%;
+  padding: 0 15px;
+}
+
+/* ===== HEADER ALIGNMENT WITH TIMELINE ===== */
+.section-header-wrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.section-header {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
+  text-align: center;
+}
+
+.section-title {
+  font-size: clamp(24px, 5vw, 40px); /* Automatically scales between 24px and 40px */
+  font-family: 'The Bjorke', sans-serif;
+  margin: 0;
+  white-space: nowrap;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.divider {
+  width: 100px;
+  height: 2px;
+  background: #3498db;
+  margin: 5px auto;
+}
+
+/* ===== TIMELINE ===== */
+.timeline-block {
+  position: relative;
+  padding: 40px 0;
+}
+
+.timeline {
+  position: relative;
+  padding: 20px 0;
+  list-style: none;
+  margin: 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: black;
+  transform: translateX(-50%);
+}
+
+.timeline-header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 10px 0;
+}
+
+.timeline-header h4 {
+  font-size: clamp(50px, 4vw, 24px); /* Automatically scales between 18px and 24px */
+  color: black;
+  margin: 0;
+  position: relative;
+  font-family: 'The Bjorke', sans-serif;
+  /* left: 50%; */
+  transform: translateX(-50%);
+  display: inline-block;
+}
+
+.timeline li {
+  position: relative;
+  width: 50%;
+  padding: 20px 40px;
+  box-sizing: border-box;
+  clear: both;
+}
+
+.timeline li.inverse {
+  left: 50%;
+}
+
+.timeline li::before {
+  content: '';
+  position: absolute;
+  top: 30px;
+  right: -6px;
+  width: 12px;
+  height: 12px;
+  background: #DFFF00;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px black;
+  z-index: 1;
+}
+
+.timeline li.inverse::before {
+  left: -6px;
+  right: auto;
+}
+
+/* ===== BACK BUTTON ===== */
+.back-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.back-button .inner {
+  width: inherit;
+  text-align: center;
+  position: relative;
+}
+
+.back-button label {
+  font-size: 0.8em;
+  line-height: 4em;
+  text-transform: uppercase;
+  color: black;
+  transition: all 0.3s ease-in;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.back-button .inner::before,
+.back-button .inner::after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background: black !important;
+  left: 0;
+  transition: all 0.3s ease-in;
+}
+
+.back-button .inner::before {
+  top: 50%;
+  transform: rotate(45deg);
+}
+
+.back-button .inner::after {
+  bottom: 50%;
+  transform: rotate(-45deg);
+}
+
+.back-button:hover label {
+  opacity: 1;
+}
+
+.back-button:hover .inner::before,
+.back-button:hover .inner::after {
+  transform: rotate(0);
+}
+
+.back-button:hover .inner::before {
+  top: 0;
+}
+
+.back-button:hover .inner::after {
+  bottom: 0;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .timeline li,
+  .timeline li.inverse {
+    width: 100%;
+    padding: 15px 20px 15px 60px;
+    left: 0;
+  }
+  
+  .timeline::before {
+    left: 30px;
+  }
+  
+  .timeline li::before,
+  .timeline li.inverse::before {
+    left: 24px;
+  }
+  
+  .section-title {
+    white-space: normal;
+    font-size: clamp(28px, 6vw, 40px); /* Ensures the font size is responsive */
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline li {
+    padding-left: 50px;
+    padding-right: 20px;
+  }
+
+  .timeline::before {
+    left: 20px;
+  }
+
+  .timeline li::before {
+    left: 14px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .back-button {
+    width: 40px;
+    top: 10px;
+    right: 10px;
+  }
+
+  .container {
+    padding: 0 10px;
+  }
+}
