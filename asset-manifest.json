@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.3fa973c1.css",
-    "main.js": "/portfolio/static/js/main.0056da33.js",
-    "static/js/453.1407b060.chunk.js": "/portfolio/static/js/453.1407b060.chunk.js",
-    "static/media/fa-solid-900.ttf": "/portfolio/static/media/fa-solid-900.2582b0e4bcf85eceead0.ttf",
-    "static/media/fa-brands-400.ttf": "/portfolio/static/media/fa-brands-400.1815e00441357e01619e.ttf",
-    "static/media/fa-solid-900.woff2": "/portfolio/static/media/fa-solid-900.2463b90d9a316e4e5294.woff2",
-    "static/media/fa-brands-400.woff2": "/portfolio/static/media/fa-brands-400.c210719e60948b211a12.woff2",
-    "static/media/fa-regular-400.ttf": "/portfolio/static/media/fa-regular-400.914997e1bdfc990d0897.ttf",
-    "static/media/h2r.png": "/portfolio/static/media/h2r.9650504e7ee76d2f1394.png",
-    "static/media/fa-regular-400.woff2": "/portfolio/static/media/fa-regular-400.89999bdf5d835c012025.woff2",
-    "static/media/TheBjorkeAlter.woff": "/portfolio/static/media/TheBjorkeAlter.002a3010a72a94d58b86.woff",
-    "static/media/TheBjorkeAlter.woff2": "/portfolio/static/media/TheBjorkeAlter.e23d0548d1a3829766c5.woff2",
-    "static/media/fa-v4compatibility.ttf": "/portfolio/static/media/fa-v4compatibility.da94ef451f4969af06e6.ttf",
-    "static/media/fa-v4compatibility.woff2": "/portfolio/static/media/fa-v4compatibility.ea8f94e1d22e0d35ccd4.woff2",
-    "index.html": "/portfolio/index.html",
-    "main.3fa973c1.css.map": "/portfolio/static/css/main.3fa973c1.css.map",
-    "main.0056da33.js.map": "/portfolio/static/js/main.0056da33.js.map",
-    "453.1407b060.chunk.js.map": "/portfolio/static/js/453.1407b060.chunk.js.map"
+    "main.css": "/viji033/portfolio.git/static/css/main.704ea1c6.css",
+    "main.js": "/viji033/portfolio.git/static/js/main.80dba7d4.js",
+    "static/js/453.1407b060.chunk.js": "/viji033/portfolio.git/static/js/453.1407b060.chunk.js",
+    "static/media/fa-solid-900.ttf": "/viji033/portfolio.git/static/media/fa-solid-900.2582b0e4bcf85eceead0.ttf",
+    "static/media/fa-brands-400.ttf": "/viji033/portfolio.git/static/media/fa-brands-400.1815e00441357e01619e.ttf",
+    "static/media/fa-solid-900.woff2": "/viji033/portfolio.git/static/media/fa-solid-900.2463b90d9a316e4e5294.woff2",
+    "static/media/fa-brands-400.woff2": "/viji033/portfolio.git/static/media/fa-brands-400.c210719e60948b211a12.woff2",
+    "static/media/fa-regular-400.ttf": "/viji033/portfolio.git/static/media/fa-regular-400.914997e1bdfc990d0897.ttf",
+    "static/media/h2r.png": "/viji033/portfolio.git/static/media/h2r.9650504e7ee76d2f1394.png",
+    "static/media/fa-regular-400.woff2": "/viji033/portfolio.git/static/media/fa-regular-400.89999bdf5d835c012025.woff2",
+    "static/media/TheBjorkeAlter.woff": "/viji033/portfolio.git/static/media/TheBjorkeAlter.002a3010a72a94d58b86.woff",
+    "static/media/TheBjorkeAlter.woff2": "/viji033/portfolio.git/static/media/TheBjorkeAlter.e23d0548d1a3829766c5.woff2",
+    "static/media/fa-v4compatibility.ttf": "/viji033/portfolio.git/static/media/fa-v4compatibility.da94ef451f4969af06e6.ttf",
+    "static/media/fa-v4compatibility.woff2": "/viji033/portfolio.git/static/media/fa-v4compatibility.ea8f94e1d22e0d35ccd4.woff2",
+    "index.html": "/viji033/portfolio.git/index.html",
+    "main.704ea1c6.css.map": "/viji033/portfolio.git/static/css/main.704ea1c6.css.map",
+    "main.80dba7d4.js.map": "/viji033/portfolio.git/static/js/main.80dba7d4.js.map",
+    "453.1407b060.chunk.js.map": "/viji033/portfolio.git/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3fa973c1.css",
-    "static/js/main.0056da33.js"
+    "static/css/main.704ea1c6.css",
+    "static/js/main.80dba7d4.js"
   ]
 }
