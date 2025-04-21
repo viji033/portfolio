@@ -21,7 +21,6 @@
   color: white;
   font-weight: 700;
   margin: 0;
-  
   text-align: center; /* Center the text inside the h4 itself */
   flex: 1; /* Take up available space */
 }
@@ -69,7 +68,7 @@
     line-height: 1.4;
     max-width: 90%;
     text-align: center;
-    margin-left: -125px;
+    margin: 0 auto; /* Center the h4 properly */
   }
 
   .footer-social {
