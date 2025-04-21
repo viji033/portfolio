@@ -60,18 +60,22 @@
 @media (max-width: 768px) {
   .footer-container {
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
+    text-align: center;
+    align-items: center;
   }
 
   .footer h4 {
     font-size: 20px;
     line-height: 1.4;
-    max-width: 90%;
+    width: 100%; /* Use width instead of max-width */
     text-align: center;
-    margin: 0 auto; /* Center the h4 properly */
+    margin: 0; /* Remove margin completely */
+    padding: 0 15px; /* Add some padding instead */
   }
 
   .footer-social {
     justify-content: center;
+    width: 100%;
   }
 }
