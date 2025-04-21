@@ -65,7 +65,9 @@
   }
 
   .footer h4 {
-    flex: none;
+    font-size: 20px;
+    line-height: 1.4;
+    max-width: 90%;
   }
 
   .footer-social {
