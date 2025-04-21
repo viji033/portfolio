@@ -9,6 +9,7 @@ const Header = () => {
   const [hoveredNav, setHoveredNav] = useState(null);
   const navigate = useNavigate();
 
+  // Handle scroll lock during transition
   useEffect(() => {
     if (isTransitioning) {
       document.body.classList.add('transitioning');
@@ -23,17 +24,25 @@ const Header = () => {
 
   const handleNavigation = (e, target) => {
     e.preventDefault();
+
+    // Scroll to top to center transition
     window.scrollTo({ top: 0, behavior: 'auto' });
+
+    // Start transition animation
     setIsTransitioning(true);
 
+    // Navigate after animation delay
     setTimeout(() => {
       navigate(target);
+
+      // Reset transition state
       setTimeout(() => {
         setIsTransitioning(false);
       }, 500);
     }, 2500);
   };
 
+  // Render the overlay transition effect
   const renderTransition = () => (
     <div className="transition-container">
       <div className="diagonal-wipe"></div>
@@ -41,6 +50,7 @@ const Header = () => {
     </div>
   );
 
+  // List of nav items
   const navItems = [
     { path: '/about', label: 'About' },
     { path: '/resume', label: 'Education' },
@@ -53,31 +63,33 @@ const Header = () => {
 
   return (
     <>
+      {/* Show transition overlay */}
       {isTransitioning && createPortal(renderTransition(), document.body)}
 
+      {/* Main Diamond Layout */}
       <section className="front-section">
-        
-        <div className="diamond-wrapper">
-          <SVG className="profile-img" hoveredNav={hoveredNav} />
+        <div className="diamond-container">
+          <div className="diamond-wrapper">
+            <SVG className="profile-img" hoveredNav={hoveredNav} />
+          </div>
+          
+          <nav className="nav-links" role="navigation" aria-label="Main">
+            <ul className="list-unstyled">
+              {navItems.map(({ path, label }) => (
+                <li key={label}>
+                  <a
+                    href={path}
+                    onClick={(e) => handleNavigation(e, path)}
+                    onMouseEnter={() => setHoveredNav(label)}
+                    onMouseLeave={() => setHoveredNav(null)}
+                  >
+                    {label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
         </div>
-
-        {/* nav-links moved outside of diamond-wrapper */}
-        <nav className="nav-links" role="navigation" aria-label="Main">
-          <ul className="list-unstyled">
-            {navItems.map(({ path, label }) => (
-              <li key={label}>
-                <a
-                  href={path}
-                  onClick={(e) => handleNavigation(e, path)}
-                  onMouseEnter={() => setHoveredNav(label)}
-                  onMouseLeave={() => setHoveredNav(null)}
-                >
-                  {label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
 
         <div className="front-heading">
           <h2 className="fw-bold">Vijayakumar</h2>
