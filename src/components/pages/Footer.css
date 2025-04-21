@@ -21,7 +21,7 @@
   color: white;
   font-weight: 700;
   margin: 0;
-  margin-right: -85px;
+  
   text-align: center; /* Center the text inside the h4 itself */
   flex: 1; /* Take up available space */
 }
