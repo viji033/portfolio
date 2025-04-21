@@ -1,25 +1,14 @@
-@font-face {
-  font-family: 'The Bjorke';
-  src: url('../../../public/fonts/TheBjorkeAlter.woff2') format('woff2'),
-       url('../../../public/fonts/TheBjorkeAlter.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-.front-section {
-  padding-top: 100px;
-  padding-bottom: 50px;
-  position: relative;
-  overflow: hidden;
-}
-
 /* Diamond Wrapper */
 .diamond-wrapper {
-  width: 400px;
-  height: 400px;
+  width: 30vw; /* Use viewport width for responsive size */
+  height: 30vw; /* Use viewport width for responsive size */
+  max-width: 400px; /* Maximum size for larger screens */
+  max-height: 400px; /* Maximum size for larger screens */
   margin: 0 auto;
-  position: relative;
-  transform: rotate(45deg);
+  position: fixed; /* Ensure it's fixed in place on the page */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%) rotate(45deg); /* Center and rotate */
   background: #f0f0f0;
   overflow: hidden;
   border-radius: 10px;
@@ -98,11 +87,9 @@
   height: 500px;
   margin: 0 auto;
   position: absolute;
-  top: 80px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  transform: rotate(45deg);
+  top: 50%; /* Center the navigation links */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%) rotate(45deg); /* Ensures it's centered and rotated */
   z-index: 25;
   pointer-events: none;
 }
@@ -268,17 +255,17 @@ body.transitioning {
 
 /* Responsive Design (Mobile Friendly) */
 @media (max-width: 768px) {
-  .diamond-wrapper,
-  .titles,
-  .nav-links {
-    width: 200px;
-    height: 200px;
+  .diamond-wrapper {
+    width: 50vw; /* Make it larger for mobile */
+    height: 50vw; /* Keep it square */
+    max-width: 300px; /* Limit size on mobile */
+    max-height: 300px; /* Limit size on mobile */
   }
 
   .diagonal-wipe,
   .expanding-diamond {
-    width: 204px;
-    height: 204px;
+    width: 54vw; /* Scale based on viewport width */
+    height: 54vw; /* Scale based on viewport width */
     top: 106px;
   }
 
@@ -289,8 +276,8 @@ body.transitioning {
 
   /* Adjust nav-links for mobile */
   .nav-links {
-    width: 200px;
-    height: 200px;
+    width: 50vw;
+    height: 50vw;
     top: 80px;
     transform: rotate(45deg);
   }
@@ -323,24 +310,3 @@ body.transitioning {
     }
   }
 }
-
-
-
-
-
-
-
-.diamond-wrapper svg {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 65%;
-  left: 65%;
-  transform: translate(-50%, -50%) rotate(-45deg);
-  object-fit: contain;
-  pointer-events: none;
-  max-width: 100%;
-  max-height: 100%;
-}
-
-
