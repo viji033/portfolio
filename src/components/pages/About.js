@@ -79,7 +79,7 @@ function About() {
                 <li><strong>Hometown:</strong> India</li>
               </ul>
               <div className="buttons">
-                <button className="btn btn-hire">Hire Me</button>
+                
                 <button className="btn btn-download">Download Resume</button>
               </div>
             </div>

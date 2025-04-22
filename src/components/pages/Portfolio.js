@@ -1,6 +1,12 @@
 import React from 'react';
 import './Portfolio.css';
 import { useNavigate } from 'react-router-dom';
+import htmlIcon from './img/html.svg';
+import cssIcon from './img/css.svg';
+import reactIcon from './img/react.svg';
+import jsIcon from './img/javascript.svg';
+import nodeIcon from './img/nodejs.svg';
+import mongoIcon from './img/mongodb.svg';
 
 const Skills = () => {
   const navigate = useNavigate();
@@ -10,14 +16,14 @@ const Skills = () => {
   };
 
   const skills = [
-    { name: 'HTML', icon: '/img/icons/html.svg' },
-    { name: 'CSS', icon: '/img/icons/css.svg' },
-    { name: 'React', icon: '/img/icons/react.svg' },
-    { name: 'JavaScript', icon: '/img/icons/javascript.svg' },
-    { name: 'Node.js', icon: '/img/icons/nodejs.svg' },
-    { name: 'MongoDB', icon: '/img/icons/mongodb.svg' },
+    { name: 'HTML', icon: htmlIcon },
+    { name: 'CSS', icon: cssIcon },
+    { name: 'React', icon: reactIcon },
+    { name: 'JavaScript', icon: jsIcon },
+    { name: 'Node.js', icon: nodeIcon },
+    { name: 'MongoDB', icon: mongoIcon },
   ];
-
+  
   return (
     <section className='portfolio-section section'>
       <div className="back-button" onClick={handleClose}>
